@@ -24,7 +24,7 @@ end
 
 def get_english_meaning(file_path, meaning)
   library = load_library(file_path)
-  if library[:get_meaning].include?(emoticon)
+  if library[:get_meaning].include?(meaning)
     library[:get_meaning][meaning]
     
   end
