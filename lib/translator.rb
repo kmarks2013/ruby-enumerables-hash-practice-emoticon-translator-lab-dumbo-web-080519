@@ -24,8 +24,10 @@ end
 
 def get_english_meaning(file_path, meaning)
   library = load_library(file_path)
+  sorry_message = "Sorry, that emoticon was not found"
   if library[:get_meaning].include?(meaning)
     library[:get_meaning][meaning]
-    
+  else
+    return sorry_message
   end
 end
